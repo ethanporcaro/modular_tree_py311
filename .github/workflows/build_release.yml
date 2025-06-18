@@ -33,7 +33,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: modular_tree_${{ matrix.name }}
-          path: modular_tree.zip
+          path: modular_tree_*.zip
   
   release:
     needs: build

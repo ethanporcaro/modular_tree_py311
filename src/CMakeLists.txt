@@ -10,7 +10,7 @@ set(BUILD_DIRECTORY ${CMAKE_SOURCE_DIR}/../build/$<0:>)
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${BUILD_DIRECTORY})
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${ADDON_LIB_DIRECTORY})
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BUILD_DIRECTORY}>)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${BUILD_DIRECTORY})
 
 project(m_tree)
 
@@ -19,7 +19,7 @@ add_subdirectory(./python_bindings)
 add_subdirectory(./tests)
 
 file(ARCHIVE_CREATE
-    OUTPUT "modular_tree.zip"
+    OUTPUT "modular_tree_${CMAKE_SYSTEM_NAME}.zip"
     PATHS ${ADDON_DIRECTORY}
     FORMAT "zip"
 )
