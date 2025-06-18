@@ -1,4 +1,4 @@
-name: test_github_actions
+name: build
 on: [push]
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.9
+          python-version: 3.11
       - name: build
         run: ./build_mtree.${{ matrix.extension }}
       - name: package addon
