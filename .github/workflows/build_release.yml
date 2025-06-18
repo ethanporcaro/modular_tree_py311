@@ -49,8 +49,5 @@ jobs:
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
-          files: | 
-            modular_tree_windows/modular_tree.zip
-            modular_tree_linux/modular_tree.zip
-            modular_tree_macOS/modular_tree.zip
+          files: modular_tree_*/modular_tree.zip
 
