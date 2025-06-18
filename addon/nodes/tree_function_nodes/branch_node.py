@@ -1,7 +1,7 @@
 from random import randint
 import bpy
 from ..base_types.node import MtreeFunctionNode
-from ....m_tree import BranchFunction
+from ...lib.m_tree import BranchFunction
 
 class BranchNode(bpy.types.Node, MtreeFunctionNode):
     bl_idname = "mt_BranchNode"

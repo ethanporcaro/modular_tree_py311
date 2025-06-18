@@ -1,6 +1,6 @@
 import bpy
 from ..base_types.socket import MtreeSocket
-from ....m_tree import ConstantProperty, RandomProperty, PropertyWrapper
+from ...lib.m_tree import ConstantProperty, RandomProperty, PropertyWrapper
 
 class MtreePropertySocket(bpy.types.NodeSocket, MtreeSocket):
     bl_idname = 'mt_PropertySocket'

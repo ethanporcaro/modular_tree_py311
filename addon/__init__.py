@@ -11,29 +11,26 @@
 # You should have received a copy of the GNU General Public License
 # along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-import os
-from pathlib import Path
-from . import python_classes
-
+from . import nodes
+from . import operators
 
 bl_info = {
-    "name" : "Modular Tree",
-    "author" : "Maxime",
-    "description" : "create trees",
-    "blender" : (2, 83, 0),
-    "version" : (4, 0, 2),
-    "location" : "",
-    "warning" : "",
-    "category" : "Generic"
+    "name": "Modular Tree",
+    "author": "Maxime",
+    "description": "create trees",
+    "blender": (4, 4, 3),
+    "version": (5, 0, 0),
+    "location": "",
+    "warning": "",
+    "category": "Generic"
 }
 
 
-# auto_load.init()
-
 def register():
-    python_classes.register()
-    # auto_load.register()
+    operators.register()
+    nodes.register()
+
 
 def unregister():
-    python_classes.unregister()
-    # auto_load.unregister()
+    operators.unregister()
+    nodes.unregister()

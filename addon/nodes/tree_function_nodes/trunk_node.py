@@ -1,7 +1,7 @@
 from random import randint
 import bpy
 from ..base_types.node import MtreeFunctionNode
-from ....m_tree import TrunkFunction
+from ...lib.m_tree import TrunkFunction
 
 class TrunkNode(bpy.types.Node, MtreeFunctionNode):
     bl_idname = "mt_TrunkNode"

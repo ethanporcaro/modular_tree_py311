@@ -1,6 +1,6 @@
 import bpy
 from ..base_types.node import MtreePropertyNode
-from ....m_tree import SimpleCurveProperty, PropertyWrapper
+from ...lib.m_tree import SimpleCurveProperty, PropertyWrapper
 
 class RampPropertyNode(bpy.types.Node, MtreePropertyNode):
     bl_idname = "mt_RampPropertyNode"

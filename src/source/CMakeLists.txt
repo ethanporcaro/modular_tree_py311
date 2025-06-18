@@ -1,11 +1,18 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.11)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} --std=c++11 -O3 -fPIC")
 
-find_package(Eigen3 CONFIG REQUIRED)
+include(FetchContent)
+
+FetchContent_Declare(
+    Eigen
+    GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
+    GIT_SHALLOW TRUE
+)
+FetchContent_MakeAvailable(Eigen)
 
 file(GLOB_RECURSE sources
     "./*.hpp"

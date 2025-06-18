@@ -24,11 +24,12 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: 3.11
+      - name: generate cmake files
+        run: cmake -S src -B build
       - name: build
-        run: ./build_mtree.${{ matrix.extension }}
-      - name: package addon
-        run: python .github/scripts/setup_addon.py
-      - name: upload zipped addon
+        run: cmake --build build
+
+      - name: upload addon
         uses: actions/upload-artifact@v4
         with:
           name: modular_tree_${{ matrix.name }}

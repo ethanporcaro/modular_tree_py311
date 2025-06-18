@@ -1,6 +1,6 @@
 import bpy
 from ..base_types.node import MtreeFunctionNode
-from ....m_tree import PipeRadiusFunction
+from ...lib.m_tree import PipeRadiusFunction
 
 class PipeRadiusNode(bpy.types.Node, MtreeFunctionNode):
     bl_idname = "mt_PipeRadiusNode"

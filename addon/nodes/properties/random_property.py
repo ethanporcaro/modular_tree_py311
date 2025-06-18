@@ -1,6 +1,6 @@
 import bpy
 from ..base_types.node import MtreePropertyNode
-from ....m_tree import RandomProperty, PropertyWrapper
+from ...lib.m_tree import RandomProperty, PropertyWrapper
 
 class RandomPropertyNode(bpy.types.Node, MtreePropertyNode):
     bl_idname = "mt_RandomPropertyNode"
