@@ -43,9 +43,14 @@ jobs:
         uses: actions/checkout@v4
       - name: Download build artifacts
         uses: actions/download-artifact@v4
+      - name: Display structure of downloaded files
+        run: ls -R
       - name: Create release
         uses: softprops/action-gh-release@v2
         if: github.ref_type == 'tag'
         with:
-          files: "**.zip"
+          files: | 
+            modular_tree_windows/modular_tree.zip
+            modular_tree_linux/modular_tree.zip
+            modular_tree_macOS/modular_tree.zip
 
