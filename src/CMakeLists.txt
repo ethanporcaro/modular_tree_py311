@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.11)
+cmake_minimum_required(VERSION 3.18)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -17,3 +17,9 @@ project(m_tree)
 add_subdirectory(./source)
 add_subdirectory(./python_bindings)
 add_subdirectory(./tests)
+
+file(ARCHIVE_CREATE
+    OUTPUT "modular_tree.zip"
+    PATHS ${ADDON_DIRECTORY}
+    FORMAT "zip"
+)
