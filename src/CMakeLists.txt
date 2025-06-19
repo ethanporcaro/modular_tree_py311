@@ -17,9 +17,3 @@ project(m_tree)
 add_subdirectory(./source)
 add_subdirectory(./python_bindings)
 add_subdirectory(./tests)
-
-file(ARCHIVE_CREATE
-    OUTPUT "modular_tree_${CMAKE_SYSTEM_NAME}.zip"
-    PATHS ${ADDON_DIRECTORY}
-    FORMAT "zip"
-)
