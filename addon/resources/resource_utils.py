@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 import bpy
 
-MTREE_RESOURCE_DIR = (Path(__file__).parent.parent.parent / "resources").resolve()
+MTREE_RESOURCE_DIR = Path(__file__).parent.resolve()
 
 class ResourceUtils:
 
@@ -13,7 +13,7 @@ class ResourceUtils:
         group = bpy.data.node_groups.get(name, None)
 
         if group is None:
-            directory = os.path.join(cls.geo_nodes_dir, "geo_nodes_2_93.blend", "NodeTree")
+            directory = os.path.join(cls.geo_nodes_dir, "geo_nodes.blend", "NodeTree")
             filepath = os.path.join(directory, name)
             bpy.ops.wm.append(filepath=filepath,filename=name,directory=directory, autoselect=False)
             group = bpy.data.node_groups[name]
