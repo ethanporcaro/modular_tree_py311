@@ -30,7 +30,7 @@ jobs:
       - name: generate cmake files
         run: cmake -S src -B build
       - name: build
-        run: cmake --build build
+        run: cmake --build build --config Release
 
       - name: upload addon
         uses: actions/upload-artifact@v4
